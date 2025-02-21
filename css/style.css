@@ -1,0 +1,990 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+@font-face {
+    font-family: Bebas;
+    src: url('../fonts/BebasKai-Regular.otf');
+}
+
+
+/*Ici, le .questionnaire,#equipe,#offre,#vision sert au fond de nos pages. En effet, les background ainsi que les linear-gradient vont être combinés, afin d'obtenir le fond de notre site ( avec des rayures, ect. ) .
+Le background-attachment: fixed; va servir à ce que notre fond ne bouge pas lorsqu'on déroule la page. (l'image est liée à la fenêtre du navigateur, elle reste donc immobile lorsque la page défile.) .
+Puis le font-family: 'Montserrat', sans-serif; permet de mettre une mise en forme du texte identique sur chaque page.*/
+
+.questionnaire,#equipe,#offre,#vision{
+  /*background:rgb(2,45,38);*/
+  background: 
+      linear-gradient(135deg,#0000 20.5%,#081d02 0 29.5%,#0000 0) 0 18px,
+      linear-gradient( 45deg,#0000 8%,#081d02 0 17%, #0000 0 58%) 36px 0,
+      linear-gradient(135deg,#0000 8%,#081d02 0 17%, #0000 0 58%,#081d02 0 67%,#0000 0),        
+      linear-gradient( 45deg,#0000 8%,#081d02 0 17%, #0000 0 58%,#081d02 0 67%,#0000 0 83%,#081d02 0 92%,#0000 0),#4E8E5A;
+  background-size: 72px 72px;
+  font-family: 'Montserrat', sans-serif;
+  background-attachment: fixed;
+}
+
+
+/*le body nous sert de base pour notre site, grâce au width qui va determiner la largeur qui sera ici de 100% tout comme le height pour la hauteur et enfin le fond qui sera blanc ici, mais qui en réalité est recouvert par notre fond définie dans .questionnaire,#equipe,#offre,#vision. */
+
+body{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+
+/*:root permet de définir les variables des couleurs*/
+
+:root {
+  --black: #030A0E;
+  --greenBack: #4E8E5A;
+  --green1 : RGB(188, 216, 92);
+  --green2 : RGB(100, 171, 109);
+  --beige : #F3FFD0;
+
+  /* equipe : */
+  --largeurEquipe : 50%;
+}
+
+
+/*CSS de la page équipe*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*définit la police d'écriture de la page*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+#secquisommesnous{
+  width: 90vw;
+  margin: auto;
+  margin-top:0px;
+}
+
+/*définit la couleur du titre de niveau h3*/
+h3{
+  color: #000000;
+  padding:1vw;
+}
+/*modifie le style du footer de la page principale*/
+#Accueil h3{
+  color:yellow;
+  padding: 1vw;
+}
+
+/*Souligne les noms de la page équipe.*/
+.nom{
+    text-decoration:underline;
+}
+
+/*définit l'encadrement et le style du titre h2 
+de la page équipe (l'introduction)*/
+#equipeh2{
+  margin-top:2vw;
+  margin-bottom:60px;
+  background-color: #ffffff;
+  color:black;
+  padding: 2vw;
+  border-radius: 4vw;
+  border-color:#dbffd1;
+  border-width: 0.5vw;
+  border-style: solid;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+#equipe h1{
+    padding-top: 25px;
+    text-align: center;
+}
+
+/*La page équipe est composée de 6 personnes.
+A chaque personne, on alterne le titre et l'avatar.*/
+
+/*Ainsi le t1 va servir pour les avatars qui seront a gauche et dont le texte sera à droite.*/
+.t1{
+    display: flex;
+  margin-bottom:150px;
+  margin-left:5vw;
+  margin-right:5vw;
+  background-color: #dbffd1;
+  color:black;
+  border-radius: 4vw;
+  border-color:white;
+  border-width: 0.5vw;
+  border-style: solid;
+  padding-left:2vw;
+  padding-right:2vw;
+}
+
+/*Quand au t2 il permet d'alterner avec le t1 en mettant cette fois-ci l'avatar a droite et e texte à gauche.*/
+.t2{
+  display: flex;
+  margin-bottom:150px;
+  margin-left:5vw;
+  margin-right:5vw;
+  background-color: #dbffd1;
+  color:black;
+  border-radius: 4vw;
+  border-color:white;
+  border-width: 0.5vw;
+  border-style: solid;
+  padding-left:4vw;
+}
+
+/*Ici le .t1 img,.t2 img sert à donner la taille précise aux avatars.*/
+.t1 img,.t2 img{
+    width : 50%;
+    border-radius: 4vw;
+    border-color:var(--greenBack);
+    border-width:0.5vw;
+    border-style: solid;
+    margin-right: 80px;
+  margin-left: 40px;
+    background-color: white;
+    margin-top:10%;
+    margin-bottom:10%; 
+}
+
+
+/*Tout les text, ici servent a donner une forme, soit une taille et une position au différents textes de notre site. Que ce soit pour les listes ou pour les titres. */
+.text{
+    width: 60%;
+  font-size:20px;
+}
+.text h3{
+  font-size:25px;
+  margin-top:0px;
+}
+.text ul{
+  margin-bottom:20px;
+  margin-left:50px;
+}
+.text li{
+  margin-bottom:8px;
+}
+.text h2{
+    text-align: center;
+    padding-top: 0px;
+    margin-bottom: 25px;
+}
+.text p{
+    line-height: 1.5;
+    padding-bottom: 30px;
+}
+
+/*ici, .t1 img,.t2 img et .t1 img:hover,.t2 img:hover servent à ce que nos avatars s'anime dès lors ou on passe dessus avec la souris. */
+.t1 img,.t2 img{
+    transition: transform 0.5s; /* Durée de l'animation de 0,5 seconde */
+    transition-timing-function: ease;}
+.t1 img:hover,.t2 img:hover{
+transform: scale(1.15);
+
+}
+
+
+
+/*c'est le CSS qui permet de donner la même forme aux titres h1, avec notamment la couleur, le fait que ce soit souligné, etc. */
+h1{
+  color: #DCE08B;
+  text-align:center;
+  margin:1vw;
+  font-size: xxx-large;
+}
+
+
+/* questionnaire */
+/*donne la forme (couleur, largeur, etc.) a un bloc de fond, qui permet de distinguer le texte du fond de base.*/
+.rectangle, .rectanglevi, .rectangleof {
+  width:70%;
+  height:100%;
+  padding: 3%;
+  border-radius: 50px;
+  background-color: #568f5e;
+  opacity: 100%;
+  margin-top:7%;
+  margin-left: 15%;
+  margin-right:15%;
+  box-shadow: 2px 2px 2px 2px black;
+}
+
+/*il y a juste une couleur différente pour la page offre qui est changé ci-dessous. */
+.rectangleof{
+  background-color: #152C26;
+}
+
+  /*couleur de l'ecriture du questionnaire. */
+form{
+  color: #ffffff;
+}
+
+fieldset{
+  margin: 2px;
+}
+
+.quest{
+  margin-top: 30px;
+}  
+
+/* bouton questionnaire */
+:root {
+  --form-control-color: #27382a;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+  
+input[type="radio"] {
+  appearance: none;
+  background-color: #8FDF5D;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  
+}
+input[type="radio"] {
+  display: grid;
+  place-content: center;
+}
+  
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+/*bouton soumettre*/
+input[type="submit"]{
+  margin-top:30px;
+  width: 60%;
+  margin-left:20%;
+  margin-right:20%;
+  border-radius: 20px;
+  border-color: white;
+  padding: 20px;
+  background-color: #8FDF5D;
+  text-transform:uppercase;
+  font-weight:bold;
+  color: white;
+  /* contour de texte : */
+  text-shadow: 0px 0px 2px #324020, 0px 0px 2px #324020, 0px 0px 2px #324020;
+  transition: 0.5s  background-color;
+}
+/*modifie le curseur de la souris, et la couleur de 
+fond du bouton au survol */
+input[type="submit"]:hover{
+  cursor:pointer;
+  background-color:#324020;
+}
+/*on enlève les bordures automatiques*/
+fieldset{
+  border: none;
+}
+
+  
+/*Permet d'afficher ou non certaines 
+questions selon les réponses choisies 
+au questionnaire*/
+  
+#Oui, #Non{
+  display: none; 
+}
+#yes:checked~#Oui{
+  display: block;
+}
+#no:checked~#Non{
+  display: block;
+}
+
+
+
+
+/* offre */
+.offre {
+  width: 60%;
+  height:100%;
+  padding: 1%;
+  border-radius: 4px;
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*permet de créer notre tableau qui sera décomposer en plusieurs cellules, grâce aux #tablePropos #boxN avec N qui correspond au numéro de la cellule.*/
+#tablePropos{
+  margin: auto;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  width: 80%;
+  min-height: 500px;
+  height: auto;
+  border-spacing: 15px;
+  color: black;
+  text-align: justify;
+  font-weight: 900;
+}
+#tablePropos td{
+  border-radius: 20px;
+  padding: 40px;
+}
+
+#tablePropos #box1{
+  background-color: #F9F9F9;
+  width: 33%;
+  height: 99%;
+  font-size: 180%;
+}
+#tablePropos #box2{
+  background-color: #F0EEE8;
+  width: 33%;
+  height: 33%;
+  font-size: 130%;
+  text-align: center;
+}
+#tablePropos #box3{
+  background-color: #DADE95;
+  width: 33%;
+  height: 66%;
+  font-size: 130%;
+}
+#tablePropos #box5{
+  background-color: 	#5E9570;
+  background-image: url("../img/logo_blanc.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 33%;
+  height: 66%;
+  margin:auto;
+}
+#tablePropos #box9{
+  background-color: #F0EEE8;
+  width: 33%;
+  height: 33%;
+}
+
+.of{
+  background-color: #50905C;
+  border-radius: 4px;
+  color: #000000;
+  font-size: 140%;
+  width: 100%;  
+  height: 25%;  
+  margin: 1.5%;  
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1%;
+  text-align: center;
+}
+
+#logoPropos{
+  max-width: 200px;
+  width: auto;
+}
+
+
+
+/* vision*/
+#vision{
+  background-attachment:fixed;
+}
+
+/* mise en page de chaque paragraphe de vision */
+.vision {
+  opacity: 100%;
+  text-align: justify;
+  line-height: 1.8;
+  height:100%;
+  padding: 5%;
+  border-radius: 4px;
+  color: #DCE08B;
+  font-size: 100%;
+}
+#vision1,#vision3{
+  margin-right: 60%;
+  margin-bottom: 20%;
+  background-color: rgb(0,0,0,0.5);
+  padding: 50px;
+  border-radius: 30px;
+}
+#vision2{
+  margin-left: 60%;
+  margin-bottom: 20%;
+  background-color: rgb(0,0,0,0.5);
+  padding: 50px;
+  border-radius: 30px;
+}
+
+#vision4{
+  background-color: rgb(0,0,0,0.5);
+  border-radius: 30px;
+  padding: 20px;
+}
+
+ .vision img {
+   max-width: 50%;
+ } 
+
+#vimg1, #vimg3{
+  float: right;
+  margin-top: 10%;
+}
+
+#vimg2{
+  float: left;
+  max-width: 40%;
+  margin-top: -10%;
+}
+
+.rectangle{
+    width:50%;
+    margin-left:25%;
+    margin-right:25%;
+  }
+
+#accueil li{
+    color:white;
+}
+#accueil h3{
+  color:yellow;
+}
+
+.questionnaire li{
+  margin-bottom: -5%;
+}
+/*sélectionne le logo vélo de la page d'accueil 
+de sorte à ce qu'il occupe toute la place possible*/
+#velo{
+  object-fit: cover;
+}
+/**/
+/*
+  Menu de navigation commun 
+  à toutes les pages.
+  */
+/**/
+
+/*On sélectionne les différentes listes du menu,
+  donc les onglets pour les aligner notamment.*/
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  display: inline-block;
+  margin-right: 50px;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+/*#menuToggle correspond aux trois barres du menu
+  cliquable*/
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  margin-left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/*On met  en blanc les liens du menu
+pour une meilleure visibilité.*/
+#menuToggle a
+{
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+/*Au survol, on change la couleur
+  en noir.*/
+#menuToggle a:hover
+{
+  color: black;
+}
+/*Ici il s'agit du menu cliquable,
+  on lui applique un style pour
+  qu'il soit un peu moins sur les bords
+  de l'écran*/
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+/*Il s'agit, encore une fois des trois barres
+  de navigation, il faut que celles-ci changent
+  de style et se tranforme en une croix au clique.*/
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background:white;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+  /*définit le style du bandeau du menu 
+  dans sont entièreté. Il faut également pouvoir
+  le caché lorsqu'il n'est pas déroulé (margin -100px)*/
+#menu
+{
+  position: absolute;
+  width: calc(100% + 50px);
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 60px;
+  padding-left: 200px;
+  background-color: #2E8B57;/*#525252*/
+  opacity:1;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+} 
+
+
+/*page accueil */
+#Accueil{
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgb(9, 18, 11);
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+/*on applique une couleur pour les liens et on enlève 
+les soulignements d'origine*/
+a {
+    text-decoration: none;
+    color: #3897a3;
+}
+/*modifie le style des boutons "participer"
+  dans la page principale*/
+.btn {
+    border: 1.5px solid #fff;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    transition: all 0.3s ease-in-out;
+}
+/*inverse les couleurs au survol*/
+.btn:hover {
+    color: #000;
+    background: #fff;
+}
+
+/*effet de survolement au défilement*/
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+  background-color: rgb(12, 24, 19);
+}
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    transform-style: preserve-3d;
+}
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.leaf {
+  /*background: url('img/leaf.jpg') no-repeat center;*/
+  object-fit: fill;
+  transform: translateZ(-600px) scale(3);
+  z-index: 1;
+}
+.leaf img {
+  max-width: 100%;
+}
+.hero-text {
+  background-size: cover;
+  transform: translateZ(0) scale(1);
+  z-index: 3;
+}
+
+
+.logo img {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  height: 20rem;
+}
+
+
+
+
+.space {
+  transform: translateZ(-600px) scale(1);
+  z-index: 3;
+  height: 20vh;
+}
+
+
+
+.info-container1,
+.info-container2,
+.info-container3,
+.info-container4 {
+  background: rgb(2, 13, 9);
+  transform: translateZ(0) scale(1);
+  height: 90vh;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+#questionnaire img {
+  object-fit: cover;
+  transform: scale(0.5);
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: xx-large;
+}
+
+li {
+  font-size: x-large
+}
+
+
+h2,
+ul {
+  margin-bottom: 3rem;
+}
+
+.text-container4 {
+  margin-left: 30%;
+}
+
+
+.info-container3 .rightpimg {
+  margin-left: 0%;
+  width: 80%;
+}
+
+.info-container3 .rightpimg img {
+  width: calc(100% / 4);
+  height: auto;
+    /* pour éviter que les images ne soient déformées */
+}
+
+#big {
+  margin-left: 130%;
+  font-size: xxx-large;
+  padding: 50px;
+  animation: glowing 1300ms infinite;
+}
+
+.bouton{
+  margin-top: 50px;
+  width: 100%;
+}
+  
+#big2 {
+  align-items: center;
+  width: 50%;
+
+  font-size: x-large;
+  padding: 20px;
+  animation: glowing 1300ms infinite;
+}
+
+.info-container1 img {
+  width: 50%;
+}
+
+  
+@keyframes glowing {
+    0% {
+        background-color: #1c9b49;
+        box-shadow: 0 0 5px #1c9b49;
+    }
+
+    50% {
+        background-color: #7ee85e;
+        box-shadow: 0 0 20px #7ee85e;
+    }
+
+    100% {
+        background-color: #1c9b49;
+        box-shadow: 0 0 5px #1c9b49;
+    }
+}
+
+
+
+/*page accueil*/
+  
+#accueil
+{
+  margin-left: 0;
+  padding:0;
+  background-color:white !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.acc_intro{
+  width:100%;
+  height: 600px;
+  margin-top:-30px;
+  object-fit: fill;
+  background-image:url('../img/acc_introimg.jpg');
+  background-color: grey;
+}
+
+.acc_intro img{
+  margin-left:25%;
+  margin-right:25%;
+  width:50%;
+}
+.p1 ul{
+  margin-top: 20px;
+  margin-left:25px;
+}
+.p2{
+  background-color:rgb(241,238,231);
+}
+.p2 h3{
+  color:black;
+}
+.p2 ol{
+  margin-top:40px;
+  margin-left:30px;
+}
+#accueil h2{
+  font-family:Impact, fantasy;
+  font-size: 34px;
+  color: #07895b;
+  line-height: 56px;
+  text-align: left;
+  margin-top:0;
+  padding-top:75px;
+  margin-left:50px;
+  text-decoration: underline;
+}
+
+h2::before{
+	content:"";
+	position:absolute;
+	background-color:#00a83a;
+	width:50px;
+	height:7px;
+}
+
+.left{
+  margin-left:100px;
+  font-size:20px;
+  font-weight:bold;
+  margin-right:60%;
+  width:50%;
+  float:left;
+}
+
+.left li{
+  margin-top:6px;
+}
+
+.right img{
+  height:350px;
+  width:30%;
+  float:right;
+  margin-right:15%;
+  margin-top:-200px;
+}
+
+
+
+/*footer*/
+.contenu {
+    flex: 1 0 auto;
+}
+.contenu p {
+    padding: 5vw 10vw;
+    text-align: justify;
+}
+
+
+footer {
+    z-index: 4;
+    transform-style: preserve-3d;
+    flex-shrink: 0;
+    border-top: 1px solid black;
+    width: 100%;
+    background-color:#061e09;
+    color: white;
+}
+.contenu-footer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 100px;
+}
+
+.bloc {
+    width: 25%;
+    margin: 0 30px;
+}
+
+.footer-contact h3,
+.footer-services h3,
+.footer-horaires h3,
+.footer-medias h3 {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.footer-contact ul{
+	list-style-type: none;
+}
+.footer-contact a{
+	text-decoration: none;
+	color:white;
+}
+
+
+.liste-services,
+.liste-horaires,
+.liste-media {
+    list-style-type: none;
+}
+
+.liste-horaires a{
+	text-decoration:none;
+	color:white;
+}
+
+
+.liste-services li {
+    padding: 2px 0;
+}
+.liste-services a {
+    text-decoration: none;
+    color: white;
+}
+.liste-partenaire a:hover {
+    color: rgb(3,3,3);
+}
+.liste-horaires a:hover {
+    color: rgb(3,3,3);
+}
+.liste-services a:hover {
+    color: rgb(3,3,3);
+}
+.liste-media a:hover {
+    color: rgb(3,3,3);
+}
+
+
+.liste-media {
+    position: relative;
+}
+.liste-media a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+/*carte sectorisée*/
+area{
+  outline-offset: -10px;
+  outline: 5px dashed blue;
+}
+
+
+
+
+
+

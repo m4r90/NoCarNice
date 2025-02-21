@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L'équipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <!-- le body id="equipe", sert au bon positionnement de la page équipe.-->
+  <!-- Sans suit le nav role="navigation", l'id="menuToggle" et l'input type="checkbox", qui servent, tous les trois, au bon fonctionnement du menu "déroulant". Dans ces dernier il y a à chaque fois les "liens" pour accéder aux différentes pages de notre site. -->
+
+  <body id="equipe">
+    <!--   Menu de navigation -->
+    <nav>
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <li><a href="index.html">NoCarNice®</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+          <li><a href="vision.html">Notre vision</a></li>
+          <li><a href="offre.html">Nos offres</a></li>
+          <li><a href="questionnaire.html">Questionnaire</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1>L'équipe</h1>
+    <!-- ici la section avec l'id="secquisommesnous" permet de bien positionner le texte qui explique pourquoi nous avons fait ce site. -->
+    <section id="secquisommesnous">
+      <!-- l'id="equipeh2" nous sert pour la mise en forme de ce paragraphe afin qu'il se distingue de la présentation plus individuelle. -->
+      <h3 id="equipeh2">
+        Nous sommes un groupe de 6 étudiants en première année de BUT
+        informatique. Étant tous intéressés par l’écologie et son avenir il nous
+        est paru évident de rechercher comment améliorer notre ville. L'objectif
+        est de limiter au plus les déplacements motorisés. Nous avons créé ce
+        site ainsi que ce questionnaire puisque nous sommes convaincus que votre
+        aide est précieuse pour mener à bien notre projet.
+      </h3>
+
+      <!--toutes les classes qui suivent servent à présenter chaque membre de l'équipe. Avec dans un premier temps la classe "tn" (n=le numéro de la personne) puis, chaque présentation va s'alterner une fois sur 2. En effet, pour les t1, l'avatar de la personne sera a gauche, et c'est pour cela que dans le HTML "<div class="qsnimg"><img class="avatar" src="img/margo.png" alt="Avatar Margo"></div>" vient juste après la classe "tn". Puis il y a le texte dont sa mise en forme est gérée par la class "text". En ce qui concerne les t2, leur avatar est a droite c'est pour cela, que la classe "text" arrive en première cette fois ci dans le HTML -->
+      <div class="t1">
+        <div class="qsnimg">
+          <img class="avatar" src="img/margo.png" alt="Avatar Margo" />
+        </div>
+        <div class="text">
+          <h3 class="nom">Margo Rozhkova</h3>
+          <h3>Rôle</h3>
+          <ul>
+            <li>Recherche sur l'amélioration des infrasturctures sociales</li>
+            <li>Analyses des prix des infrasturctures</li>
+            <li>Création du code source et donc de la base du site</li>
+          </ul>
+          <h3>Contact</h3>
+          <p>
+            Pour me contacter, veuillez m'adresser un
+            <a href="mailto:margo.rozhkova@etu.unice.fr">mail</a> à l'adresse
+            suivante
+          </p>
+        </div>
+      </div>
+
+      <div class="t2">
+        <div class="text">
+          <h3 class="nom">Rayan Outili</h3>
+
+          <h3>Rôle</h3>
+          <ul>
+            <li>Recherche sur l'échantillonage</li>
+            <li>Recherche sur l'enquête</li>
+            <li>Création du code source et donc de la base du site</li>
+          </ul>
+          <h3>Contact</h3>
+          <p>
+            Pour me contacter, veuillez m'adresser un
+            <a href="mailto:rayan.outili@etu.unice.fr">mail</a> à l'adresse
+            suivante
+          </p>
+        </div>
+        <div class="qsnimg">
+          <img class="avatar" src="img/rayan.png" alt="Avatar Rayan" />
+        </div>
+      </div>
+
+      <div class="t1">
+        <div class="qsnimg">
+          <img class="avatar" src="img/maud.png" alt="Avatar Maud" />
+        </div>
+        <div class="text">
+          <h3 class="nom">Maud Marconcini</h3>
+          <h3>Rôle</h3>
+          <ul>
+            <li>Rédaction du rapport</li>
+            <li>
+              Recherche sur l'amélioration sur les infrastructures sociales
+            </li>
+            <li>Recherche de divers effets de style en CSS</li>
+          </ul>
+          <h3>Contact</h3>
+          <p>
+            Pour me contacter, veuillez m'adresser un
+            <a href="mailto:maud.marconcini@etu.unice.fr">mail</a> à l'adresse
+            suivante
+          </p>
+        </div>
+      </div>
+
+      <div class="t2">
+        <div class="text">
+          <h3 class="nom">Loris Pensa</h3>
+          <h3>Rôle</h3>
+          <ul>
+            <li>Recherche sur l'échantillonage</li>
+            <li>Recherche sur l'enquête</li>
+            <li>Recherche de différentes balises pour le code HTML</li>
+          </ul>
+          <h3>Contact</h3>
+          <p>
+            Pour me contacter, veuillez m'adresser un
+            <a href="mailto:loris.pensa@etu.unice.fr">mail</a> à l'adresse
+            suivante
+          </p>
+        </div>
+        <div class="qsnimg">
+          <img class="avatar" src="img/loris.png" alt="Avatar Loris" />
+        </div>
+      </div>
+
+      <div class="t1">
+        <div class="qsnimg">
+          <img class="avatar" src="img/raphael.png" alt="Avatar Raphael" />
+        </div>
+        <div class="text">
+          <h3 class="nom">Raphael Duflot</h3>
+          <h3>Rôle</h3>
+          <ul>
+            <li>Recherche sur les prix</li>
+            <li>Recherche sur l'échantillonage</li>
+            <li>Création du code source et donc de la base du site</li>
+          </ul>
+          <h3>Contact</h3>
+          <p>
+            Pour me contacter, veuillez m'adresser un
+            <a href="mailto:raphael.duflot@etu.unice.fr">mail</a> à l'adresse
+            suivante
+          </p>
+        </div>
+      </div>
+
+      <div class="t2">
+        <div class="text">
+          <h3 class="nom">Georgia Bounaudet</h3>
+          <h3>Rôle</h3>
+          <ul>
+            <li>
+              Recherche sur l'amélioration sur les infrastructures sociales
+            </li>
+            <li>Recherche sur les prix</li>
+          </ul>
+          <h3>Contact</h3>
+          <p>
+            Pour me contacter, veuillez m'adresser un
+            <a href="mailto:rayan.outili@etu.unice.fr">mail</a> à l'adresse
+            suivante
+          </p>
+        </div>
+        <div class="qsnimg">
+          <img class="avatar" src="img/georgia.png" alt="Avatar Georgia" />
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+  </body>
+</html>
