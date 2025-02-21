@@ -1,0 +1,300 @@
+/*RESPONSIVE des pages en cas d'affichages réduits.*/
+
+@media screen and (max-width:1000px){
+  #equipeh2{
+  font-size: 3vh;
+}
+  .t1{
+    display: flex;
+  margin-bottom:75px;
+  margin-left:5vw;
+  margin-right:5vw;
+  background-color: #dbffd1;
+  color:black;
+  border-radius: 4vw;
+  border-color:white;
+  border-width: 0.5vw;
+  border-style: solid;
+  padding-left:2vw;
+  padding-right:2vw;
+}
+
+.t2{
+  display: flex;
+  margin-bottom:75px;
+  margin-left:5vw;
+  margin-right:5vw;
+  background-color: #dbffd1;
+  color:black;
+  border-radius: 4vw;
+  border-color:white;
+  border-width: 0.5vw;
+  border-style: solid;
+  padding-left:4vw;
+}
+  .t1 img,.t2 img{
+    width : 70%;
+    border-radius: 2vw;
+    border-color:var(--greenBack);
+    border-width:0.0vw;
+    border-style: solid;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: white;
+    margin-top:0%;
+    margin-bottom:0%; 
+}
+    .text{
+    width: 100%;
+  font-size:20px;
+}
+}
+
+@media screen and (max-width:800px){
+  .rectangle{
+    width:80%;
+    margin-left:10%;
+  }
+}
+
+@media screen and (max-width:800px){
+  h1{
+    font-size: 30px;
+  }
+  
+}
+  
+/*Responsive de la page accueil*/
+@media only screen and (max-width: 600px) {
+  .leaf img{
+    display: none;
+  }
+
+  
+  
+  body{
+    width: 100%;
+  }
+  .p1,.p2{
+  width:100%;
+  height:650px;
+  border-top: 2px solid #00003d;
+}
+  .acc_intro {
+    height: 400px;
+  }
+  .acc_intro img {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #accueil h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .left {
+    margin-left: 50px;
+    font-size: 16px;
+  }
+  .right img {
+    width: 50%;
+    margin-right: 25%;
+  }
+  .p3 .left {
+    width: 80%;
+  }
+  .p3 .rightpimg {
+    width: 100%;
+    margin-top: 0;
+  }
+    .left {
+    margin-left: 50px;
+    font-size: 16px;
+    width: 80%;
+    margin-right: 10%;
+  }
+  ul,ol{
+    margin-bottom:20px;
+  }
+  img{
+    margin-left:5%;
+    width:90%;
+  }
+  .right img {
+    width: 80%;
+    margin-right: 10%;
+    margin-top: 0;
+  }
+  .p4 ul{
+    margin-top:30px;
+  }
+  .p4 .right{
+  height:350px;
+  width:75%;
+  float:right;
+  margin-right:12.5%;
+  margin-top:50px;
+  overflow:scroll;
+  padding:25px;
+  background-color:#b8ffb8;
+}
+}
+
+  
+
+
+@media (min-width: 760px) {
+
+  .info-container1,
+  .info-container2,
+  .info-container3,
+  .info-container4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 3rem;
+      align-items: center;
+      text-align: left;
+  }
+
+  .info-container1 img {
+      justify-self: end;
+      width: 75%;
+  }
+
+  .info-container2 img {
+      justify-self: end;
+      width: 75%;
+  }
+
+
+  .info-container3 img {
+      justify-self: end;
+      width: 75%;
+  }
+  .info-container3 .rightpimg {
+    margin-left: 30%;
+    width: 80%;
+}
+
+  .text-container ul:nth-of-type(1) {
+      font-size: 1rem;
+      width: 75%;
+      margin: 1rem 0;
+  }
+
+  .text-container ul:nth-of-type(1) {
+      font-size: 0.86rem;
+  }
+
+    @media (min-width: 1126px) {
+
+        .leaf,
+        .hero-text {
+            background-size: contain;
+        }
+    }
+
+}
+    /* Ici le @media screen and (max-width: 1050px) va permettre de redimensionner la taille de notre tableau et de ses cellules dès lors ou l'écran devient trop petit pour voir le taleau en entier. */
+@media screen and (max-width: 1050px){
+  #tablePropos{
+    transform : scale(0.8);
+  }
+}
+
+
+
+/* responsive de Nos Offres, lorsque l'ecran est pas assez large */
+.rectangleofEq{
+    display: block;
+    margin: auto;
+}
+.rectangleonEq{
+    display: none;
+}
+@media screen and (max-width: 1200px){
+  .rectangleofEq{
+    display: none;
+  }
+  .rectangleonEq{
+    display: block;
+  }
+}
+.rectangleonEq p{
+  background-color: rgb(0,0,0,0.5);
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+  font-size: 200%;
+  color: white;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: justify;
+}
+
+  
+
+/**//**/
+/*responsive du footer*/
+/**//**/
+
+/*Lorsque la largeur de l'écran est inférieure à 1300px.*/
+@media screen and (max-width: 1300px) {
+
+    .contenu-footer {
+        width: 700px;
+        flex-wrap: wrap;
+    }
+    .bloc {
+        width: 40%;
+        margin: 0 0;
+    }
+    .bloc:nth-child(1),
+    .bloc:nth-child(2) {
+        margin-bottom: 50px;
+    }
+
+}
+
+/*Lorsque la largeur de l'écran est inférieure à 800px.*/
+@media screen and (max-width: 800px) {
+    .contenu-footer {
+        width: 320px;
+    }
+    .bloc {
+        width: 300px;
+        margin: 30px 30px;
+    }
+    .bloc:nth-child(1),
+    .bloc:nth-child(2) {
+        margin-bottom: 30px;
+    }
+    .bloc:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:1000px){
+  #menu{
+    padding-left: 100px;
+  }
+}
+
+/*Ici, le @media screen and (max-width:700px) sert pour notre format téléphone en réduisant la taille de .rectangle. */
+@media screen and (max-width:700px){
+  
+
+  #vision1,#vision2,#vision3,#vision4{
+    font-size: 15px;
+    padding: 2vw;
+    margin: 2vw;
+  }
+
+  #big2{
+    padding: 2px;
+    font-size: large;
+  }
+  
+.quest{
+  margin-top:5%;
+}}

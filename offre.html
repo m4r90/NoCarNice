@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nos offres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <!-- le body id="offre", sert au bon positionnement de la page Nos offres.-->
+  <!-- Sans suit le nav role="navigation", l'id="menuToggle" et l'input type="checkbox", qui servent, tous les trois, au bon fonctionnement du menu "déroulant". Dans ces dernier il y a à chaque fois les "liens" pour accéder aux différentes pages de notre site. De plus ils se trouvent sur toutes les pages, car le menu doit être accessible sur toutes les pages -->
+
+  <body id="offre">
+    <!--   Menu de navigation  -->
+    <nav>
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <li><a href="index.html">NoCarNice®</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+          <li><a href="vision.html">Notre vision</a></li>
+          <li><a href="offre.html">Nos offres</a></li>
+          <li><a href="questionnaire.html">Questionnaire</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- le h1 sert pour notre titre "Nos offres", il est indispensable puisqu'il sert a ce que la page ait son nom en haut, afin qu'il n'y ait pas de malentendu. -->
+      <div>
+        <h1>Nos offres</h1>
+      </div>
+
+      <!--ici, la class "rectangleof" prend tous les différents paragraphes qui expliquent les différentes offres qui sont proposées aux entreprises. Cette class permet que tout les différents blocs de la page, soient compris dans un bloc afin qu'ils ressortent par rapport au fond.-->
+      <div class="rectangleofEq">
+        <!--Puis, nous avons l'id="tablePropos" qui sert a mettre en place les différents blocs qui vont être créer. Ainsi, suite a cette class nous avons plusieurs td, tr et id qui vont permettre de créer ces blocs en leur attribuant une taille, leur texte, ect. -->
+        <table id="tablePropos">
+          <tbody>
+            <tr>
+              <td id="box1" rowspan="2">
+                Les entreprises peuvent également bénéficier d'un amortissement
+                spécial sur l'achat d'équipements servant à réduire l'empreinte
+                carbone de la ville.
+              </td>
+              <td id="box2">Voici les offres de nous vous proposons</td>
+              <td id="box3" rowspan="3">
+                Le CEE est un mécanisme économique qui oblige les fournisseurs
+                d’énergies à favoriser les économies d’énergies via un
+                financement auprès des particuliers, des copropriétés et des
+                entreprises.
+              </td>
+            </tr>
+            <tr>
+              <td id="box5" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td id="box9" colspan="1">
+                Les aménagements réalisés par les entreprises peuvent être
+                compensés par des primes et des prises en charges grâce au
+                budget alloué par le CEE.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Cette div remplace le tableau lorsque la page manque de largeur. Il contient de simple paragraphe pour une bonne lisibilité sur téléphone -->
+      <div class="rectangleonEq">
+        <p>
+          Les entreprises peuvent également bénéficier d'un amortissement
+          spécial sur l'achat d'équipements servant à réduire l'empreinte
+          carbone de la ville.
+        </p>
+        <p>
+          Le CEE est un mécanisme économique qui oblige les fournisseurs
+          d’énergies à favoriser les économies d’énergies via un financement
+          auprès des particuliers, des copropriétés et des entreprises.
+        </p>
+        <p>
+          Les aménagements réalisés par les entreprises peuvent être compensés
+          par des primes et des prises en charges grâce au budget alloué par le
+          CEE.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

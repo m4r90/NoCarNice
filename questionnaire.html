@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Questionnaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <!-- la page index.html est notre questionnaire puisque quand on accède au site c'est lui qui doit apparaître en premier.-->
+
+  <!-- Tout d'abord, nous avons le body id="questionnaire" qui sert à la forme de la page Questionnaire .-->
+  <!-- S'en suit le nav role="navigation", l'id="menuToggle" et l'input type="checkbox", qui servent, tous les trois, au bon fonctionnement du menu "déroulant". Dans ces dernier il y a à chaque fois les "liens" pour accéder aux différentes pages de notre site. De plus ils se trouvent sur toutes les pages, car le menu doit être accessible sur toutes les pages -->
+
+  <body class="questionnaire">
+    <nav>
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <li><a href="index.html">NoCarNice®</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+          <li><a href="vision.html">Notre vision</a></li>
+          <li><a href="offre.html">Nos offres</a></li>
+          <li><a href="questionnaire.html">Questionnaire</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!--Puis nous avons le h1 qui contient le titre de la page soit : "Le questionnaire" -->
+      <h1>Le questionnaire</h1>
+
+      <!--La class "rectangle" prend toutes les différentes questions du questionnaire, et permet que toutes ses questions soient comprises dans un bloc afin qu'elles ressortent par rapport au fond.-->
+      <div class="rectangle">
+        <!--S'en suit le form qui est indispensable pour la mise en forme de notre questionnaire. dans celui-ci il va y avoir toutes les class "quest" qui vont permettre de séparer chaque question, dans chacune de ces class, les questions doivent être unique ( c'est-à-dire que la personne faisant le questionnaire doit répondre qu'a une seule réponse par question ). c'est pourquoi chaque réponse possible est encadrée par un fieldset ainsi qu'un input et un label. -->
+        <form oninput="x.value=parseInt(a.value)">
+          <!-- 1 -->
+          <div class="quest">
+            <ul>
+              <li>Quelle est la taille de votre entreprise ? :</li>
+            </ul>
+            <fieldset>
+              <input type="radio" id="micro" name="taille" value="PME" />
+              <label for="micro">Microentreprise</label>
+            </fieldset>
+            <fieldset>
+              <input type="radio" id="PME" name="taille" value="PME" />
+              <label for="PME">Petite et Moyenne Entreprise (PME)</label>
+            </fieldset>
+            <fieldset>
+              <input type="radio" id="ETI" name="taille" value="ETI" />
+              <label for="ETI">Entreprise de Taille Intermediaire (ETI)</label>
+            </fieldset>
+            <fieldset>
+              <input type="radio" id="grande" name="taille" value="grande" />
+              <label for="grande">Grande</label>
+            </fieldset>
+          </div>
+
+          <!-- 2 -->
+          <!--Dans cette deuxième question, nous avons une carte de la ville de Nice dont il faut cocher le Quartier l'entreprise est située. C'est pour cette raison que le code HTML de cette question est différent. Pour ce faire nous avons mis dans un premier temps la carte de la ville puis toutes les réponses possible qui fonctionnent grâce aux area target. -->
+          <div class="quest" id="locaux">
+            <ul>
+              <li>
+                <p>Dans quels secteurs se trouvent vos locaux ?</p>
+              </li>
+            </ul>
+            <img usemap="#map" src="img/map.png" alt="carte_secteur_nice" />
+
+            <map name="map">
+              <area
+                shape="poly"
+                alt="31"
+                coords="25,142,45,140,47,159,61,148,60,116,71,106,72,99,63,99,68,68,54,51,67,42,74,35,83,16,61,9,35,50,22,74,20,108"
+                title="Lingostière"
+                href="#locaux"
+                target="_self"
+              />
+
+              <area
+                target="_self"
+                alt="36"
+                title="St Roman"
+                href="#locaux"
+                coords="84,17,74,37,55,50,70,69,64,95,73,99,72,108,61,119,62,130,87,127,90,117,100,111,108,115,122,112,123,73,114,70,115,47,111,36,103,35,100,22"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="40"
+                title="St Pancrace"
+                href="#locaux"
+                coords="121,74,150,56,164,38,188,34,202,75,188,99,173,104,174,112,161,114,152,113,125,117"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="35"
+                title="Crémat"
+                href="#locaux"
+                coords="60,130,59,152,67,153,75,163,76,180,67,186,92,194,101,180,99,165,114,158,108,150,123,146,122,114,108,117,99,113,85,127"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="33"
+                title="St Isidore"
+                href="#locaux"
+                coords="27,143,47,140,47,159,60,149,70,159,73,169,68,184,85,191,85,208,80,217,87,246,73,246,72,259,62,263,45,264"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="31"
+                title="Ste Marguerite"
+                href="#locaux"
+                coords="47,267,75,347,85,341,79,319,90,313,89,298,92,278,108,272,94,252,81,247,71,261"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="29"
+                title="St Augustin"
+                href="#locaux"
+                coords="74,346,82,361,134,324,108,322,100,304,88,298,88,312,78,323,85,341"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="30"
+                title="Arenas"
+                href="#locaux"
+                coords="83,361,86,403,85,426,115,416,159,356,157,321,132,314,131,328"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="28"
+                title="Caucade"
+                href="#locaux"
+                coords="91,294,93,274,115,273,140,291,159,294,157,319,131,314,134,320,111,321"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="27"
+                title="Fabron"
+                href="#locaux"
+                coords="108,266,118,255,145,264,134,241,152,254,171,247,178,251,171,256,181,273,161,297,147,299,140,287"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="32"
+                title="St Antoine"
+                href="#locaux"
+                coords="85,193,86,247,94,250,104,265,116,256,143,262,131,238,151,253,160,245,131,222,126,231,114,217,137,206,114,158,100,164,101,185"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="34"
+                title="Ventabrun"
+                href="#locaux"
+                coords="109,151,123,145,139,191,167,216,163,225,165,239,131,221,126,230,117,218,138,207"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="38"
+                title="St Pierre de Féric"
+                href="#locaux"
+                coords="123,116,139,183,174,223,189,221,179,202,189,205,199,180,161,142,160,115"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="21"
+                title="Madeleine"
+                href="#locaux"
+                coords="153,238,164,251,180,256,177,267,199,240,190,247,183,237,189,233,188,227,170,223,166,233,170,238"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="26"
+                title="Baumettes"
+                href="#locaux"
+                coords="180,264,206,221,207,242,215,248,183,270"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="20"
+                title="St Phillippe"
+                href="#locaux"
+                coords="179,206,187,210,198,186,207,190,200,212,206,212,207,220,191,242,184,232,189,224"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="39"
+                title="Pessicart"
+                href="#locaux"
+                coords="162,113,174,112,180,117,172,125,174,131,172,136,181,135,192,158,200,156,204,167,192,172,160,144"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="41"
+                title="Gairaut"
+                href="#locaux"
+                coords="192,96,201,101,205,89,221,103,220,114,240,114,255,100,250,88,262,86,273,90,277,85,270,73,277,72,277,62,267,62,261,55,254,57,234,60,227,57,219,66,201,74,199,84"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="12"
+                title="Le Ray"
+                href="#locaux"
+                coords="177,102,175,111,185,115,188,121,203,129,221,126,222,113,219,103,204,89,201,101,190,99"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="10"
+                title="Rimiez"
+                href="#locaux"
+                coords="252,93,260,90,273,91,278,86,271,76,283,82,287,91,308,88,312,95,291,101,282,102,281,122,276,124,284,131,281,152,267,157,257,155,260,150,255,145,244,157,243,163,236,162,241,149,245,139,245,123,254,114"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="11"
+                title="St Maurice"
+                href="#locaux"
+                coords="215,126,225,160,236,160,247,128,243,122,254,112,255,100,241,112,221,115"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="13"
+                title="St Sylvestre"
+                href="#locaux"
+                coords="181,117,172,127,177,130,170,135,181,135,190,146,194,156,200,158,205,169,225,160,214,128,199,126"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="9"
+                title="Ariane"
+                href="#locaux"
+                coords="311,89,314,94,349,84,360,64,360,53,364,48,355,34,350,17,325,14,319,48,329,68,321,81"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="14"
+                title="Mantega"
+                href="#locaux"
+                coords="207,190,225,183,223,170,220,163,194,172"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="19"
+                title="Le Piol"
+                href="#locaux"
+                coords="208,189,219,186,222,211,210,223,202,212"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="15"
+                title="Libération"
+                href="#locaux"
+                coords="221,161,227,183,235,183,242,198,251,190,244,183,242,162"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="18"
+                title="Vernier"
+                href="#locaux"
+                coords="219,186,219,217,243,200,234,185"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="25"
+                title="Gambetta"
+                href="#locaux"
+                coords="221,216,206,224,206,240,215,248,222,247"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="23"
+                title="Thiers"
+                href="#locaux"
+                coords="222,216,221,229,244,223,240,204"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="24"
+                title="Rue de France"
+                href="#locaux"
+                coords="222,230,222,246,247,238,242,224"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="16"
+                title="Cimiez"
+                href="#locaux"
+                coords="243,157,243,184,251,190,261,189,257,195,285,208,294,182,274,176,275,165,281,168,281,156,261,157,258,149,253,144"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="22"
+                title="Médecin"
+                href="#locaux"
+                coords="241,203,246,241,257,239,256,235,270,229,261,214,255,217,246,196"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="17"
+                title="Carabacel"
+                href="#locaux"
+                coords="245,193,256,216,261,212,270,227,282,218,286,207,254,195,259,188"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="1"
+                title="Vieille Ville"
+                href="#locaux"
+                coords="256,236,284,217,294,229,291,244"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="2"
+                title="Le Port"
+                href="#locaux"
+                coords="287,202,281,215,293,230,290,244,311,246,313,211"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="4"
+                title="Mont Boron"
+                href="#locaux"
+                coords="310,218,304,240,322,254,327,271,355,271,365,246,339,211,341,194,331,189,339,183,336,172,325,173,331,160,320,189,322,199,318,206"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="3"
+                title="Riquier"
+                href="#locaux"
+                coords="293,186,288,201,314,213,323,201,303,189"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="5"
+                title="St Roch"
+                href="#locaux"
+                coords="293,185,291,169,312,125,324,128,332,151,322,189,322,202"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="6"
+                title="Pasteur"
+                href="#locaux"
+                coords="271,174,292,182,288,157,302,133,287,116,292,104,280,125"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="7"
+                title="Roquebillière"
+                href="#locaux"
+                coords="285,153,290,169,312,120,298,104,312,98,308,91,285,104,297,124,303,136"
+                shape="poly"
+              />
+
+              <area
+                target="_self"
+                alt="8"
+                title="Vinalgrier"
+                href="#locaux"
+                coords="297,105,317,97,331,106,342,136,352,114,375,125,398,125,376,138,372,161,354,173,343,191,336,185,337,173,325,171,332,150,323,126"
+                shape="poly"
+              />
+            </map>
+          </div>
+
+          <!-- 3 -->
+          <div class="quest">
+            <ul>
+              <li>
+                Vos locaux sont-ils équipés de parking pour vélo/trottinette?
+              </li>
+            </ul>
+
+            <div id="imbrique1">
+              <input
+                type="radio"
+                id="yes"
+                name="parking"
+                value="ouiPark"
+                required
+              />
+              <label for="yes">Oui</label>
+
+              <input type="radio" id="no" name="parking" value="nonPark" />
+              <label for="no">Non</label>
+
+              <!-- 4 -->
+              <!--Puis nous avons une autre question qui est différente des autres, puisque lorsque la personne coche la réponse "oui" ou "non" une autres question va apparaître en dessous. Cela est possible grâce à l'id="oui" et l'id="non" mais aussi grace aux différents label et input. -->
+              <div id="Oui" class="quest">
+                <ul>
+                  <li>
+                    Est-ce-que vos locaux possèdent des alimentations pour
+                    recharger des vélos / trottinettes électriques
+                  </li>
+                </ul>
+                <input type="radio" id="yes1" name="sioui" value="Oui" />
+                <label for="yes1">Oui</label>
+
+                <input type="radio" id="no1" name="sioui" value="Non" />
+                <label for="no1">Non</label>
+              </div>
+
+              <div id="Non" class="quest">
+                <ul>
+                  <li>
+                    Seriez-vous prêt à équiper vos locaux de parkings pour des
+                    vélos / trottinettes électriques
+                  </li>
+                </ul>
+                <input type="radio" id="yes2" name="sinon" value="Oui" />
+                <label for="yes2">Oui</label>
+
+                <input type="radio" id="no2" name="sinon" value="Non" />
+                <label for="no2">Non</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <!--Enfin, la dernière question différentes est celle-ci car elle permet de choisir un niveau entre 0 et 10, afin d'estimer l'utilisation du covoiturage. Ce qui permet de réaliser ce type de réponse est le </label></li>0<input type="range" id="a" name="a" min="0" max="10">10<output name="x" for="a"></output> qui permet de prendre un minimun (min="0") et un maximum (max="10") -->
+          <div class="quest">
+            <ul>
+              <li>
+                A combien estimez-vous l'utilisation du covoiturage dans votre
+                entreprise ?
+              </li>
+            </ul>
+            0
+            <input type="range" id="a" name="a" min="0" max="10" />
+            10 -
+
+            <output name="x" for="a"></output>
+          </div>
+
+          <!-- 6 -->
+          <div class="quest">
+            <ul>
+              <li>Seriez-vous prêts à indemniser les trajets en vélo ?</li>
+            </ul>
+            <fieldset>
+              <input
+                type="radio"
+                id="yes3"
+                name="indemnisé"
+                value="Oui"
+                required
+              />
+              <label for="yes3">Oui</label>
+            </fieldset>
+
+            <fieldset>
+              <input type="radio" id="no3" name="indemnisé" value="Non" />
+              <label for="no3">Non</label>
+            </fieldset>
+          </div>
+
+          <!-- 7 -->
+          <div class="quest">
+            <ul>
+              <li>
+                Est-il possible de rejoindre les locaux via des pistes
+                cyclables, stations de bus ou tramways ?
+              </li>
+            </ul>
+            <fieldset>
+              <input
+                type="radio"
+                id="yes4"
+                name="rejoindre"
+                value="Oui"
+                required
+              />
+              <label for="yes4">Oui</label>
+            </fieldset>
+            <fieldset>
+              <input type="radio" id="no4" name="rejoindre" value="Non" />
+              <label for="no4">Non</label>
+            </fieldset>
+          </div>
+
+          <!-- 8 -->
+          <div class="quest">
+            <ul>
+              <li>
+                Si des aménagements sont créés seriez-vous prêts a promouvoir
+                ces déplacements de transports écologiques ?
+              </li>
+            </ul>
+            <fieldset>
+              <input
+                type="radio"
+                id="yes5"
+                name="promouvoir"
+                value="Oui"
+                required
+              />
+              <label for="yes5">Oui</label>
+            </fieldset>
+            <fieldset>
+              <input type="radio" id="no5" name="promouvoir" value="Non" />
+              <label for="no">Non</label>
+            </fieldset>
+          </div>
+
+          <input type="submit" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

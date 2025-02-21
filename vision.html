@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notre vision</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <!-- le body id="vision", sert au bon positionnement de la page Notre vision.-->
+  <!-- Sans suit le nav role="navigation", l'id="menuToggle" et l'input type="checkbox", qui servent, tous les trois, au bon fonctionnement du menu "déroulant". Dans ces dernier il y a à chaque fois les "liens" pour accéder aux différentes pages de notre site. De plus ils se trouvent sur toutes les pages, car le menu doit être accessible sur toutes les pages -->
+
+  <body id="vision">
+    <nav>
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <li><a href="index.html">NoCarNice®</a></li>
+          <li><a href="equipe.html">L'équipe</a></li>
+          <li><a href="vision.html">Notre vision</a></li>
+          <li><a href="offre.html">Nos offres</a></li>
+          <li><a href="questionnaire.html">Questionnaire</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- le h1 sert pour notre titre "Notre vision", il est indispensable puisqu'il sert a ce que la page ai son nom en haut, afin qu'il n'y ai pas de malentendu.-->
+      <div>
+        <h1>Notre vision</h1>
+      </div>
+
+      <!--ici, la class "rectanglevi" prend tous les différents paragraphes qui expliques notre vision sur le projet. Cette dernière permet que tout les différents paragraphes soient compris dans un bloc afin qu'ils ressortent par rapport au fond.-->
+      <div class="rectanglevi">
+        <!--Puis, nous avons la class "vision" qui va permettre de donner une forme identique a tous les paragraphes. Dans cette class il va y avoir toutes les images et tous les différents paragraphe que contient cette page. -->
+        <div class="vision">
+          <img src="img/vision1.PNG" alt="img1" id="vimg1" />
+          <!-- Sans suit les différents id "visionN" avec N qui correspond aux différents paragraphe. En effet, pour tous les N impair, le paragraphe se trouvera a gauche, et inversement pour tous les N pair. -->
+          <p id="vision1">
+            S’ intéresser à l’écologie est primordiale pour nous. En effet, au
+            cours de cette année, l’actualité nous montre à quel point il est
+            difficile d’obtenir du carburant, suite à la demande des carburants
+            ainsi que l’augmentation des prix.
+          </p>
+
+          <img src="img/vision2.PNG" alt="img2" id="vimg2" />
+          <p id="vision2">
+            Par conséquent, le besoin de limiter les déplacements motorisés est
+            indispensable pour réduire l’empreinte carbone de Nice.
+          </p>
+
+          <img src="img/vision3.PNG" alt="img3" id="vimg3" />
+          <p id="vision3">
+            C’est pour cela que nous avons fait au mieux pour dessiner un
+            environnement harmonieux pour tout usager, de l’automobiliste au
+            cycliste en passant par le simple piéton.
+          </p>
+
+          <p id="vision4">
+            Mais pour que ce projet prenne forme, nous avons besoin de votre
+            soutient, et répondre à ce questionnaire est indispensable pour nous
+            afin de répondre au mieux à vos besoins et aux besoins de notre
+            ville.
+          </p>
+
+          <!--Enfin, l'id="big2" et la class="btn" servent à la mise en place de notre bouton qui permet de faire un lien avec la page questionnaire. en effet si les personnes veulent faire le questionnaire après avoir lu notre vision, elles le peuvent grâce a ce bouton. -->
+          <div class="bouton">
+            <a href="questionnaire.html" id="big2" class="btn">Répondre</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

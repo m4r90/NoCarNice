@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accueil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <!--Tout d'abord nous avons la class="wrapper" qui permet de faire le forme de notre page accueil. Cette class va contenir tout ce qu'il y a dans cette page que ce soit le menu ou encore les quelques explications du site. -->
+
+  <!-- le body id="accueil", sert au bon positionnement de la page Accueil.-->
+  <!-- S'en suit le nav role="navigation", l'id="menuToggle" et l'input type="checkbox", qui servent, tous les trois, au fonctionnement du menu "déroulant". Dans ces dernier il y a à chaque fois les "liens" pour accéder aux différentes pages de notre site. -->
+
+  <body id="accueil">
+    <div class="wrapper">
+      <!-- Menu de navigation -->
+      <nav>
+        <div id="menuToggle">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <li><a href="index.html">NoCarNice®</a></li>
+            <li><a href="equipe.html">L'équipe</a></li>
+            <li><a href="vision.html">Notre vision</a></li>
+            <li><a href="offre.html">Nos offres</a></li>
+            <li><a href="questionnaire.html">Questionnaire</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Permet de gerer la parallaxe avec l'image de fond et le logo-->
+      <div class="parallax__group hero-container">
+        <div class="parallax_layer hero-text"></div>
+
+        <div class="parallax_layer leaf">
+          <img alt="feuille" src="img/leaf.jpg" />
+        </div>
+        <div class="parallax_layer green"></div>
+
+        <div class="logo">
+          <img alt="logo" src="img/logo_blanc.png" />
+        </div>
+      </div>
+
+      <!-- Paragraphe "Pour qui ?", avec une liste non numerotée -->
+      <div class="parallax__group info-container1">
+        <img src="img/img1home.jpg" alt="img1" id="img1" />
+        <div class="text-container1">
+          <h2>Pour qui ?</h2>
+          <ul>
+            <li>Vous êtes chef d'entreprise</li>
+            <li>Vous possèdez des locaux à Nice</li>
+            <li>Vous souhaitez agir pour la planète🌍</li>
+          </ul>
+          <a href="questionnaire.html" class="btn">Participer</a>
+        </div>
+      </div>
+
+      <!-- Paragraphe "Pourquoi?", avec une liste non numerotée -->
+      <div class="space"></div>
+      <div class="parallax__group info-container2">
+        <img src="img/img2home.png" alt="img2" id="img2" />
+        <div class="text-container2">
+          <h2>Pourquoi ?</h2>
+          <ul>
+            <li>Ecologique : moins de pollution !</li>
+            <li>Economique : moins de frais !</li>
+            <li>Santé : plus d'activité physique !</li>
+          </ul>
+
+          <a href="questionnaire.html" class="btn">Participer</a>
+        </div>
+      </div>
+      <div class="space"></div>
+      <div class="parallax__group info-container3">
+        <div class="rightpimg">
+          <img src="img/rayan.png" alt="avatarDeRayan" />
+          <img src="img/raphael.png" alt="avatarDeRaphael" />
+          <img src="img/maud.png" alt="avatarDeMaud" />
+          <img src="img/margo.png" alt="avatarDeMargo" />
+          <img src="img/loris.png" alt="avatarDeLoris" />
+          <img src="img/georgia.png" alt="avatarDeGeorgia" />
+
+          <!-- Bandeau qui correspond à la partie "qui nous sommes" -->
+        </div>
+        <div class="text-container3">
+          <h2>Qui sommes-nous ?</h2>
+          <ul>
+            <li>Un groupe de 6 étudiants.</li>
+          </ul>
+          <ul>
+            <li>Rayan Outili</li>
+            <li>Raphaël Duflot</li>
+            <li>Maud Marconcini</li>
+            <li>Loris Pensa</li>
+            <li>Margo Rozhkova</li>
+            <li>Georgia Bounaudet</li>
+          </ul>
+          <a href="questionnaire.html" class="btn">Participer</a>
+        </div>
+      </div>
+      <!-- Partie qui explique à la personne ce qu'elle doit faire pour nous aider -->
+      <div class="space"></div>
+      <div class="parallax__group info-container4">
+        <div class="text-container4">
+          <h2>Que dois-je faire ?</h2>
+          <ul>
+            <li>Prenez cinq minutes pour répondre à ce questionnaire !</li>
+          </ul>
+          <!--         Bouton répondre au questionnaire -->
+          <a href="questionnaire.html" id="big" class="btn">Répondre</a>
+        </div>
+      </div>
+      <!--     Partie qui correspond au footer de la page -->
+      <footer>
+        <div class="contenu-footer">
+          <div class="bloc footer-services">
+            <h3>Notre Site</h3>
+            <ul class="liste-services">
+              <li><a href="index.html">↑NoCarNice®</a></li>
+              <li><a href="equipe.html">L'Equipe</a></li>
+              <li><a href="offre.html">Notre offre</a></li>
+              <li><a href="vision.html">Notre vision</a></li>
+              <li><a href="questionnaire.html">Le questionnaire</a></li>
+            </ul>
+          </div>
+
+          <div class="bloc footer-horaires">
+            <h3>A Propos</h3>
+            <ul class="liste-horaires">
+              <li><a href="">Assistance</a></li>
+              <li><a href="">Conditions Générales</a></li>
+              <li><a href="">Mentions Juridiques</a></li>
+              <li><a href="">Cookies</a></li>
+            </ul>
+          </div>
+
+          <div class="bloc footer-medias">
+            <h3>Nos réseaux</h3>
+            <ul class="liste-media">
+              <li><a href="">Facebook</a></li>
+              <li><a href="">Instagram</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">Youtube</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
